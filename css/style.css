@@ -1008,7 +1008,6 @@ Author:         Creative Layer
      font-size: 15px;
      color: #ffffff;
      padding: 10px 27px;
-
      -webkit-border-radius: 40px;
      -moz-border-radius: 40px;
      -ms-border-radius: 40px;
@@ -1036,12 +1035,29 @@ Author:         Creative Layer
      -o-border-radius: 8px;
      border-radius: 8px;
      border: 1px solid #9BD275;
+ }
 
+ .input-container {
+     font-size: larger;
+ }
 
+ .job-search-btn {
+     float: left;
+     font-family: Open Sans;
+     font-size: 15px;
+     padding: 10px 50px;
+     -webkit-border-radius: 20px;
+     -moz-border-radius: 8px;
+     -ms-border-radius: 8px;
+     -o-border-radius: 8px;
+     border-radius: 30px;
+     color: white;
+     background-color: #5030EA;
  }
 
  .post-job-btn2:hover,
- .post-job-btn3:hover {
+ .post-job-btn3:hover,
+ .job-search-btn:hover {
      background-color: #23109C;
      color: white;
  }
@@ -1069,7 +1085,7 @@ Author:         Creative Layer
      margin: 10px 20px;
  }
 
- /* .carousel-indicators [data-bs-target] {
+ .carousel-indicators [data-bs-target] {
      width: 12px !important;
      height: 12px !important;
      padding: 0px !important;
@@ -1081,18 +1097,19 @@ Author:         Creative Layer
      -o-border-radius: 6px !important;
      border-radius: 6px !important;
      position: relative !important;
-     left: 33% !important;
+     left: 37% !important;
+     top: -50px !important;
+     border-width: 0px !important;
+     opacity: 1 !important;
+     background-color: white !important;
+
  }
 
  .carousel-indicators .active {
-     opacity: 5 !important;
-     color: green !important;
- } */
-
- .className {
-     width: 612px;
-     height: 408px;
+     opacity: 1 !important;
+     background-color: #2A9B7F !important;
  }
+
 
  .account-btns {
      float: right;
@@ -1605,7 +1622,7 @@ Author:         Creative Layer
      float: left;
      width: 100%;
      position: relative;
-
+     margin: 50px 0;
  }
 
  .job-field input {
@@ -1616,12 +1633,8 @@ Author:         Creative Layer
      font-size: 13px;
      color: #888888;
      margin: 0;
-     padding: 0 70px 0 30px;
      height: 60px;
-     line-height: 61px;
-
      background-color: #FFF;
-
      -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
      -ms-border-radius: 8px;
@@ -13473,16 +13486,16 @@ Author:         Creative Layer
 
  .new-slide-2-img {
      position: absolute;
-     top: 120px;
-     right: 10%;
+     top: 150px;
+     right: 0;
      z-index: 10;
-     width: 400px;
  }
 
  .shade-Image {
      position: absolute;
-     top: 0px;
-     right: 0px;
+     top: 100px;
+     left: 140px;
+     width: 500px;
  }
 
  .new-slide-3 {
@@ -13495,13 +13508,12 @@ Author:         Creative Layer
  .carousel-words-container {
      position: absolute;
      top: 220px;
-     left: 200px;
+     left: 0px;
      color: #FFFFFF;
-
  }
 
  .carousel-text1 {
-     font-size: 63px;
+     font-size: 58px;
  }
 
  .carousel-text2 {
@@ -13518,17 +13530,28 @@ Author:         Creative Layer
      background: -ms-linear-gradient(-150deg, #4a29e8 0%, #4a29e8 71%, #4a29e8 100%);
      background: linear-gradient(-150deg, #4a29e8 0%, #4a29e8 71%, #4a29e8 100%);
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8b91dd', endColorstr='#10195d', GradientType=1);
-     height: 200px;
+     height: fit-content;
      text-align: center;
 
  }
 
+ .search-container {
+     margin: 50px 0 !important;
+ }
+
+ .search-btn {
+     position: absolute;
+     padding-top: 9px;
+     right: 0px;
+     margin: 0 30px;
+ }
 
  .flex-container {
      display: flex;
      justify-content: space-between;
      align-items: center;
      width: 100%;
+     margin: 50px 0;
  }
 
  .partner-company p {
