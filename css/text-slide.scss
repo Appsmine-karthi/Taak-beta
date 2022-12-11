@@ -1,0 +1,72 @@
+$texts: "Hello, I'm Austin Archibald.", "I enjoy programming";
+$color: #fff;
+$speed: 3s; //5s;
+
+@function get-odd-even($list) {
+  $odd: (); $even: ();
+  @for $i from 1 through length($list) {
+    @if ($i % 2 == 1) { $odd: append($odd, nth($list, $i)); }
+    @else { $even: append($even, nth($list, $i)); }
+  }
+  @return $odd, $even;
+}
+
+@mixin change-text-keyframes($texts, $id: "") {
+  $len: length($texts);
+  @keyframes change-text#{if($id == "", "", "-" + $id)} {
+    @for $i from 1 through $len {
+      $text: "#{nth($texts, $i)}";
+      #{100% / $len * ($i - 1)}, #{100% / $len * $i - if($i == $len, 0, .0001)} {
+        content: $text;
+      }
+    }
+  }
+}
+
+@mixin change-text($texts, $speed) {
+  $len: length($texts);
+  $odd-even: get-odd-even($texts);
+  @if $len % 2 == 1 {
+    &::before {
+      animation: slide $speed * 2 infinite $speed * -.2,
+        change-text 2 * $speed * $len infinite $speed / -2;
+    }
+    &::after {
+      animation: slide $speed * 2 infinite $speed * -1.2,
+        change-text 2 * $speed * $len infinite $speed * -$len - $speed / 2;
+    }
+    @include change-text-keyframes(join($odd-even...));
+  }
+  @else {
+    &::before {
+      animation: slide $speed * 2 infinite $speed * -.2,
+        change-text-odd $speed * $len infinite $speed / -2;
+    }
+    &::after {
+      animation: slide $speed * 2 infinite $speed * -1.2,
+        change-text-even $speed * $len infinite $speed * -$len + $speed / 2;
+    }
+    @include change-text-keyframes(nth($odd-even, 1), odd);
+    @include change-text-keyframes(nth($odd-even, 2), even);
+  }
+}
+
+.profile-bio {
+  text-align: center;
+  position: relative;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  @include change-text($texts, $speed);
+}
+
+@keyframes slide {
+  0%, 100% { top: -25px; color: transparent; }
+  10%, 50% { top: 0; color: $color; }
+  60% { top: 25px; color: transparent; }
+}
