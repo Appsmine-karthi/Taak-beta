@@ -13270,7 +13270,7 @@ Author:         Creative Layer
      background: #0b1b46;
      padding: 0 30px;
      overflow-y: scroll;
-     height: 620px;
+     height: 650px;
  }
 
  .responsive-opensec .btn-extars {
@@ -13532,6 +13532,7 @@ Author:         Creative Layer
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8b91dd', endColorstr='#10195d', GradientType=1);
      height: fit-content;
      text-align: center;
+     border: none;
 
  }
 
@@ -13552,6 +13553,11 @@ Author:         Creative Layer
      align-items: center;
      width: 100%;
      margin: 50px 0;
+     flex-wrap: wrap;
+ }
+
+ .flex-container-item {
+     margin: 0 50px;
  }
 
  .partner-company p {
@@ -13773,4 +13779,13 @@ Author:         Creative Layer
      -ms-transition: all 0.4s ease 0s;
      -o-transition: all 0.4s ease 0s;
      transition: all 0.4s ease 0s;
+ }
+
+ .connecting-lines {
+     width: 3px;
+     height: 350px;
+     background-color: #673ab7;
+     position: absolute;
+     top: 18%;
+     left: 72px;
  }
