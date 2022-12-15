@@ -1097,7 +1097,7 @@ Author:         Creative Layer
      -o-border-radius: 6px !important;
      border-radius: 6px !important;
      position: relative !important;
-     left: 37% !important;
+     left: 30% !important;
      top: -50px !important;
      border-width: 0px !important;
      opacity: 1 !important;
@@ -2691,6 +2691,10 @@ Author:         Creative Layer
  .download_widget {
      float: left;
      width: 100%;
+ }
+
+ .download_widget img {
+     width: 200px;
  }
 
  .download_widget a {
@@ -13471,7 +13475,7 @@ Author:         Creative Layer
 
 
  .new-slide-2 {
-     height: 700px;
+     height: 600px;
      overflow: hidden;
      position: relative;
      background: rgb(36, 51, 169);
@@ -13482,13 +13486,6 @@ Author:         Creative Layer
      background: -ms-linear-gradient(-150deg, #4a29e8 0%, #4a29e8 71%, #4a29e8 100%);
      background: linear-gradient(-150deg, #4a29e8 0%, #4a29e8 71%, #4a29e8 100%);
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8b91dd', endColorstr='#10195d', GradientType=1);
- }
-
- .new-slide-2-img {
-     position: absolute;
-     top: 150px;
-     right: 0;
-     z-index: 10;
  }
 
  .shade-Image {
@@ -13507,7 +13504,7 @@ Author:         Creative Layer
 
  .carousel-words-container {
      position: absolute;
-     top: 220px;
+     top: 200px;
      left: 0px;
      color: #FFFFFF;
  }
